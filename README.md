@@ -37,14 +37,32 @@ Example `.env` configuration:
 
 ```env
 PORT=4200
-GMM_DATABASE_URL=postgresql://postgres:1234@localhost:5432/postgres
+ANGULAR_DATABASE_URL=mysql://{user}:{password}@localhost:3306/{Your Database}
 ```
 
-## Database Setup
+## Table Setup
 
 To set up the database, execute the following SQL script:
 
-[Download public.sql](public.sql)
+```
+DROP TABLE IF EXISTS `employee`;
+CREATE TABLE `employee`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(55) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `first_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `last_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `company` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `gender` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `education` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `experience` int NULL DEFAULT NULL,
+  `email` varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `date_of_birth` date NULL DEFAULT NULL,
+  `created_date` datetime NULL DEFAULT NULL,
+  `updated_date` datetime NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+```
 
 ### Database Design
 
