@@ -1,19 +1,14 @@
-# Subscription Management System
+# Angular CRUD Employee Management - Backend
 
-Welcome to the Subscription Management System! This system enables users to register for various services under specific conditions. Please read the documentation below to understand how to set up and use this system.
+This is the backend component of the Angular CRUD Employee Management system. It provides the server-side logic and API endpoints for managing employee data.
 
 ## Table of Contents
-- [Introduction](#introduction)
 - [System Requirements](#system-requirements)
 - [API Endpoints](#api-endpoints)
 - [Installation and Setup](#installation-and-setup)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-
-## Introduction
-
-
 
 ## System Requirements
 
