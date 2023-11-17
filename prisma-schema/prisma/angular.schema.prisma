@@ -1,0 +1,26 @@
+generator client {
+  provider        = "prisma-client-js"
+  output          = "./generated/prisma-client-angular"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+  binaryTargets   = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("ANGULAR_DATABASE_URL")
+}
+
+model employee {
+  id            Int       @id @default(autoincrement())
+  uuid          String?   @db.VarChar(55)
+  first_name    String?   @db.VarChar(100)
+  last_name     String?   @db.VarChar(100)
+  company       String?   @db.VarChar(150)
+  gender        String?   @db.VarChar(20)
+  education     String?   @db.VarChar(100)
+  experience    Int?
+  email         String?   @db.VarChar(120)
+  date_of_birth DateTime? @db.Date
+  created_date  DateTime? @db.DateTime(0)
+  updated_date  DateTime? @db.DateTime(0)
+}
