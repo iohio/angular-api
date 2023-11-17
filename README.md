@@ -66,24 +66,6 @@ CREATE TABLE `employee`  (
 - **Request:**
   - Method: `POST`
   - URL: `http://localhost:4600/employees`
-  - Body:
-    ```json
-    {
-      "name": "John Doe",
-      "position": "Software Engineer",
-      "department": "IT"
-      // ... other employee details
-    }
-    ```
-- **Response:**
-  - Status: `201 Created`
-  - Body:
-    ```json
-    {
-      "id": 123,
-      "message": "Employee added successfully"
-    }
-    ```
 
 ### Update Employee
 
@@ -92,23 +74,6 @@ CREATE TABLE `employee`  (
 - **Request:**
   - Method: `PUT`
   - URL: `http://localhost:4600/employees/:id`
-  - Body:
-    ```json
-    {
-      "name": "Updated Name",
-      "position": "Updated Position",
-      "department": "Updated Department"
-      // ... other updated employee details
-    }
-    ```
-- **Response:**
-  - Status: `200 OK`
-  - Body:
-    ```json
-    {
-      "message": "Employee updated successfully"
-    }
-    ```
 
 ### Get Employee List (Read)
 
@@ -117,21 +82,6 @@ CREATE TABLE `employee`  (
 - **Request:**
   - Method: `GET`
   - URL: `http://localhost:4600/employees`
-- **Response:**
-  - Status: `200 OK`
-  - Body:
-    ```json
-    [
-      {
-        "id": 1,
-        "name": "John Doe",
-        "position": "Software Engineer",
-        "department": "IT"
-        // ... other employee details
-      },
-      // ... other employees
-    ]
-    ```
 
 ### Delete Employee
 
@@ -140,9 +90,6 @@ CREATE TABLE `employee`  (
 - **Request:**
   - Method: `DELETE`
   - URL: `http://localhost:4600/employees/:id`
-- **Response:**
-  - Status: `204 No Content`
-  - Body: None
 
 ## Installation and Setup
 
