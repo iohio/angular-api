@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  boxy-agent-api-dev:
+    container_name: angular-test
+    image: angular-test-api-docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+      - ./nodemon.json:/app/nodemon.json
+    expose:
+      - '4600'
+    ports:
+      - '4600:4600'
+    command: yarn dev
